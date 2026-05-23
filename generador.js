@@ -1,7 +1,7 @@
     // --- VARIABLES GLOBALES ---
     let fecha={
-        diadeguerra:"",
-        año:"",
+        diaNumero:"",
+        anio:"",
         mes:"",
         dia:"",
         hora:"",
@@ -29,13 +29,13 @@
     // --- FUNCIÓN 1: Definir y calcular los valores variables ---
 
     function establecerFecha() {
-        fecha.diadeguerra = aleatorioEntre(0,851,0);
+        fecha.diaNumero = aleatorioEntre(0,851,0);
         let fecha = new Date(1939, 8, 1); 
-        fecha.setDate(fecha.getDate() + fecha.diadeguerra);
+        fecha.setDate(fecha.getDate() + fecha.diaNumero);
       // Extraemos el día, mes y año asegurando que tengan dos dígitos
         fecha.dia = String(fecha.getDate()).padStart(2, '0');
         fecha.mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
-        fecha.año = fecha.getFullYear();
+        fecha.anio = fecha.getFullYear();
     }
 
     function definirVariablesMision() {
