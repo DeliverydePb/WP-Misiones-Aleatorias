@@ -17,8 +17,7 @@
         diaDelaGuera = aleatorioEntre(0,851,0);
         let fecha = new Date(1939, 9, 1); 
         fecha.setDate(fecha.getDate() + diaDelaGuera);
-    
-        // 3. Extraemos el día, mes y año asegurando que tengan dos dígitos
+      // Extraemos el día, mes y año asegurando que tengan dos dígitos
         diaMision = String(fecha.getDate()).padStart(2, '0');
         mesMision = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
         anioMision = fecha.getFullYear();
