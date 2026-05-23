@@ -30,12 +30,12 @@
 
     function establecerFecha() {
         fecha.diaNumero = aleatorioEntre(0,851,0);
-        let fecha = new Date(1939, 8, 1); 
-        fecha.setDate(fecha.getDate() + fecha.diaNumero);
+        let tiempo = new Date(1939, 8, 1); 
+        tiempo.setDate(fecha.getDate() + fecha.diaNumero);
       // Extraemos el día, mes y año asegurando que tengan dos dígitos
-        fecha.dia = String(fecha.getDate()).padStart(2, '0');
-        fecha.mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
-        fecha.anio = fecha.getFullYear();
+        fecha.dia = String(tiempo.getDate()).padStart(2, '0');
+        fecha.mes = String(tiempo.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
+        fecha.anio = tiempo.getFullYear();
     }
 
     function definirVariablesMision() {
