@@ -1,5 +1,5 @@
 function aleatorioEntre(min,max,decim) {
-    let numero = Math.random() * (maximo - minimo) + minimo;
-    return parseFloat(numero.toFixed(cantidadDecimales));
+    let numero = Math.random() * (max - min) + min;
+    return parseFloat(numero.toFixed(decim));
 }
 
