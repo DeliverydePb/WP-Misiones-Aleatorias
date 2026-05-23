@@ -1,9 +1,9 @@
     // --- VARIABLES GLOBALES ---
+    let diaDelaGuera = "";
     let fechaMision = "";
     let anioMision = "";
     let mesMision = "";
     let diaMision = "";
-    let diasDesdeInicio = "";
     let horaMision = "";
     let minutoMision = "";
     let amanecer = "";
@@ -12,6 +12,11 @@
     let sonaresActivos = "";
 
     // --- FUNCIÓN 1: Definir y calcular los valores variables ---
+
+    function diaDelaGuerra() {
+        let diaDelaGuera = aleatorioEntre(0,851,0);
+    }
+
     function definirVariablesMision() {
         // Generar horas aleatorias realistas (Amanecer entre 04:30 y 06:29, Atardecer entre 18:30 y 20:59)
         let horaAmanecer = Math.floor(Math.random() * 2) + 4; // 4 o 5
