@@ -106,12 +106,14 @@
         // Definir Si/No aleatoriamente (50% de probabilidad)
         cambioDireccion = Math.random() < 0.5 ? "Si" : "No";
         sonaresActivos = Math.random() < 0.5 ? "Si" : "No";
+    }
 
-        // Actualizar la interfaz visual de la página
+    // Actualizar la interfaz visual de la página
+    function actualizarPantalla() {
         document.getElementById("ui-cambio").innerText = cambioDireccion;
         document.getElementById("ui-sonares").innerText = sonaresActivos;
     }
-
+        
     // --- FUNCIÓN 2: Construir el texto y disparar la descarga ---
     function construirYDescargarArchivo() {
         // Combinamos la parte estática con nuestras variables globales
@@ -145,6 +147,7 @@ Sonares Activos: ${sonaresActivos}`;
     // --- FUNCIÓN PRINCIPAL (Orquestadora) ---
     function ejecutarGeneracion() {
         definirVariablesMision();
+        actualizarPantalla();
         construirYDescargarArchivo();
     }
 </script>
