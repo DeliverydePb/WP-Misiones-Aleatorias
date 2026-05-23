@@ -21,7 +21,7 @@
         diaMision = String(fecha.getDate()).padStart(2, '0');
         mesMision = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
         anioMision = fecha.getFullYear();
-        fechaMision = `${dia}/${mes}/${anio}`;
+        fechaMision = `${diaMision}/${mesMision}/${anioMision}`;
     }
 
     function definirVariablesMision() {
