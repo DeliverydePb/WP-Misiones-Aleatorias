@@ -1,27 +1,41 @@
     // --- VARIABLES GLOBALES ---
-    let diaDelaGuerra = "";
-    let fechaMision = "";
-    let anioMision = "";
-    let mesMision = "";
-    let diaMision = "";
-    let horaMision = "";
-    let minutoMision = "";
-    let amanecer = "";
-    let atardecer = "";
+    let fecha={
+        diadeguerra:"",
+        año:"",
+        mes:"",
+        dia:"",
+        hora:"",
+        minuto:""
+    }
+
+    let oceano={
+        numero:"",
+        nombre:"",
+        lat:"",
+        long:""
+    }
+
+	let clima={
+		vientoVelocidad:"",
+		vientoDireccion:"",
+		niebla:"",
+		amanecer:"",
+		atardecer:""
+	}
+
     let cambioDireccion = "";
     let sonaresActivos = "";
 
     // --- FUNCIÓN 1: Definir y calcular los valores variables ---
 
     function establecerFecha() {
-        diaDelaGuerra = aleatorioEntre(0,851,0);
+        fecha.diadeGuerra = aleatorioEntre(0,851,0);
         let fecha = new Date(1939, 8, 1); 
         fecha.setDate(fecha.getDate() + diaDelaGuerra);
       // Extraemos el día, mes y año asegurando que tengan dos dígitos
-        diaMision = String(fecha.getDate()).padStart(2, '0');
-        mesMision = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
-        anioMision = fecha.getFullYear();
-        fechaMision = `${diaMision}/${mesMision}/${anioMision}`;
+        fecha.dia = String(fecha.getDate()).padStart(2, '0');
+        fecha.mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
+        fecha.año = fecha.getFullYear();
     }
 
     function definirVariablesMision() {
