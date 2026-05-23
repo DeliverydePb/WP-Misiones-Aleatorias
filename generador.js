@@ -81,6 +81,7 @@ Sonares Activos: ${sonaresActivos}`;
 
     // --- FUNCIÓN PRINCIPAL (Orquestadora) ---
     function ejecutarGeneracion() {
+        establecerFecha();
         definirVariablesMision();
         actualizarPantalla();
         construirYDescargarArchivo();
