@@ -29,9 +29,9 @@
     // --- FUNCIÓN 1: Definir y calcular los valores variables ---
 
     function establecerFecha() {
-        fecha.diadeGuerra = aleatorioEntre(0,851,0);
+        fecha.diadeguerra = aleatorioEntre(0,851,0);
         let fecha = new Date(1939, 8, 1); 
-        fecha.setDate(fecha.getDate() + diaDelaGuerra);
+        fecha.setDate(fecha.getDate() + fecha.diadeguerra);
       // Extraemos el día, mes y año asegurando que tengan dos dígitos
         fecha.dia = String(fecha.getDate()).padStart(2, '0');
         fecha.mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 para volver al formato humano (1-12)
