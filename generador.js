@@ -164,4 +164,4 @@ Utilice todos los medio a su alcance para evitar que lleguen a puerto.]) // This
 				icono.innerText = "🔊";
 			}
 		}
-	}	
+	}

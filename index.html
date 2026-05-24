@@ -101,6 +101,26 @@
 			vertical-align: middle;
 		}
 		
+		.instrucciones {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #444;
+            font-size: 12px;
+            color: #8a8a8a;
+            line-height: 1.4;
+        }
+        .ruta {
+            background-color: #111;
+            padding: 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #af3a3a;
+            display: block;
+            margin-top: 6px;
+            word-break: break-all;
+            border: 1px solid #222;
+            text-align: center;
+        }
 		
     </style>
 </head>
@@ -111,9 +131,6 @@
 </video>
 
 <div id="contenedor-volumen">
-    <span id="icono-volumen">🔈</span>
-    <input type="range" id="control-volumen" min="0" max="1" step="0.05" value="0" oninput="ajustarVolumen(this.value)">
-</div><div id="contenedor-volumen">
     <span id="icono-volumen">🔈</span>
     <input type="range" id="control-volumen" min="0" max="1" step="0.05" value="0" oninput="ajustarVolumen(this.value)">
 </div>
@@ -132,6 +149,12 @@
         <span>Sonares Activos:</span>
         <div id="ui-sonares" class="valor">-</div>
     </div>
+ 
+    <div class="instrucciones">
+        <span>Copiar el archivo descargado <strong>(LevelFile.txt)</strong> en:</span>
+        <span class="ruta">C:\Program Files (x86)\Steam\steamapps\workshop\content\490920</span>
+    </div>
+</div>
  
 </div>
 
