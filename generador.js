@@ -144,3 +144,24 @@ Utilice todos los medio a su alcance para evitar que lleguen a puerto.]) // This
         actualizarPantalla();
         construirYDescargarArchivo();
     }
+
+	function ajustarVolumen(valor) {
+		let video = document.getElementById("bg-video");
+		let icono = document.getElementById("icono-volumen");
+    
+		// Cambiamos el volumen del video (va de 0.0 a 1.0)
+		video.volume = valor;
+    
+		// Modificamos el icono según el nivel para que sea intuitivo
+		if (parseFloat(valor) === 0) {
+			video.muted = true;
+			icono.innerText = "🔈";
+		} else {
+			video.muted = false; // Desmutea el video si el usuario sube el volumen
+			if (valor < 0.5) {
+				icono.innerText = "🔉";
+			} else {
+				icono.innerText = "🔊";
+			}
+		}
+	}	

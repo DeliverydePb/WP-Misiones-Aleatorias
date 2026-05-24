@@ -59,19 +59,70 @@
             font-weight: bold;
             cursor: pointer;
             border-radius: 4px;
-            margin-top: 20px;
+            margin-bottom: 20px;
             transition: background 0.2s;
         }
         .btn-generar:hover {
             background-color: #d14545;
         }
+		
+		#bg-video {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -2; /* Se posiciona detrás del contenedor principal */
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		opacity: 0.25; /* Bajamos la opacidad para que no moleste la lectura del panel */
+		}
+	
+		#contenedor-volumen {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background-color: rgba(38, 38, 38, 0.85);
+			border: 1px solid #444;
+			padding: 6px 12px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			border-radius: 4px;
+			z-index: 10;
+		}
+
+		#control-volumen {
+			accent-color: #af3a3a; /* Usa el mismo color rojo de tus botones */
+			cursor: pointer;
+			width: 80px;
+			vertical-align: middle;
+		}
+		
+		
     </style>
 </head>
 <body>
 
+<video id="bg-video" autoplay loop muted playsinline>
+    <source src="Stahlhaie.mp4" type="video/mp4">
+</video>
+
+<div id="contenedor-volumen">
+    <span id="icono-volumen">🔈</span>
+    <input type="range" id="control-volumen" min="0" max="1" step="0.05" value="0" oninput="ajustarVolumen(this.value)">
+</div><div id="contenedor-volumen">
+    <span id="icono-volumen">🔈</span>
+    <input type="range" id="control-volumen" min="0" max="1" step="0.05" value="0" oninput="ajustarVolumen(this.value)">
+</div>
+
 <div class="container">
-    <h2>BDU - Generador de Misiones</h2>
-    
+    <h2>24 Flotilla 'Geweih'<br>Generador de Misiones</h2>
+
+    <button class="btn-generar" onclick="ejecutarGeneracion()">Generar Misión</button> 
+ 
     <div class="campo">
         <span>Cambio de dirección del convoy:</span>
         <div id="ui-cambio" class="valor">-</div>
@@ -81,8 +132,7 @@
         <span>Sonares Activos:</span>
         <div id="ui-sonares" class="valor">-</div>
     </div>
-    
-    <button class="btn-generar" onclick="ejecutarGeneracion()">Generar Misión</button>
+ 
 </div>
 
 <script src="utilidades.js"></script>
